@@ -83,7 +83,7 @@ class _HomeState extends State<Home> {
                   icon: Icons.check_circle_outline,
                 ),
                 const SizedBox(
-                  height: 30,
+                  height: 20,
                 ),
                 InkWell(
                   child: const HomepageCard(
@@ -97,7 +97,7 @@ class _HomeState extends State<Home> {
                   },
                 ),
                 const SizedBox(
-                  height: 30,
+                  height: 20,
                 ),
                 const HomepageCard(
                   title: "Share live location",
@@ -105,7 +105,7 @@ class _HomeState extends State<Home> {
                   icon: Icons.location_on,
                 ),
                 const SizedBox(
-                  height: 30,
+                  height: 20,
                 ),
                 const HomepageCard(
                   title: "Travel Mode",
@@ -114,7 +114,7 @@ class _HomeState extends State<Home> {
                   icon: Icons.card_travel,
                 ),
                 const SizedBox(
-                  height: 30,
+                  height: 80,
                 ),
               ],
             ),
