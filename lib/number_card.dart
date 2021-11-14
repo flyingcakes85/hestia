@@ -1,17 +1,13 @@
 import "package:flutter/material.dart";
 import 'const.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class NumberCard extends StatelessWidget {
-  const NumberCard(
-      {Key? key,
-      required this.title,
-      required this.subTitle,
-      required this.icon})
+  const NumberCard({Key? key, required this.title, required this.phoneNumber})
       : super(key: key);
 
   final String title;
-  final String subTitle;
-  final IconData icon;
+  final String phoneNumber;
 
   @override
   Widget build(BuildContext context) {
@@ -33,18 +29,23 @@ class NumberCard extends StatelessWidget {
                 ),
                 const SizedBox(height: 13),
                 Text(
-                  subTitle,
+                  phoneNumber,
                   style: cardSubTitleStyle,
                 ),
               ],
             ),
           ),
-          Padding(
-            padding: const EdgeInsets.all(20.0),
-            child: Icon(
-              icon,
-              color: iconColor,
+          InkWell(
+            child: Padding(
+              padding: const EdgeInsets.all(20.0),
+              child: Icon(
+                Icons.call,
+                color: iconColor,
+              ),
             ),
+            onTap: () {
+              launch("tel://$phoneNumber");
+            },
           ),
         ],
       ),
