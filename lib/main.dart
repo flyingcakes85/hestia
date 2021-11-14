@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import './home_page_card.dart';
+import 'home_page_card.dart';
+import 'const.dart';
 
 void main() => runApp(const MyApp());
 
@@ -9,12 +10,9 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.pink,
-        scaffoldBackgroundColor: Colors.black,
-      ),
-      home: const Home(title: 'App Name'),
+      title: 'Hestia',
+      theme: appTheme,
+      home: const Home(title: 'Hestia'),
     );
   }
 }

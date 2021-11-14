@@ -1,4 +1,5 @@
 import "package:flutter/material.dart";
+import 'const.dart';
 
 class HomepageCard extends StatelessWidget {
   const HomepageCard(
@@ -18,17 +19,14 @@ class HomepageCard extends StatelessWidget {
       margin: const EdgeInsets.symmetric(horizontal: 20),
       width: 100,
       height: 90,
-      decoration: BoxDecoration(
-        color: Colors.black54,
-        borderRadius: BorderRadius.circular(8),
-      ),
+      decoration: cardDecoration,
       child: Row(
         children: [
           Padding(
             padding: const EdgeInsets.all(20.0),
             child: Icon(
               icon,
-              color: Colors.greenAccent,
+              color: iconColor,
             ),
           ),
           Flexible(
