@@ -51,7 +51,8 @@ class _EmergencyNumbersState extends State<EmergencyNumbers> {
     if (res.statusCode == 200) {
       jsonResponse = res.body;
     } else {
-      exit(0);
+      jsonResponse =
+          '[{"id":1,"name":"Women Helpline","number":1091},{"id":2,"name":"Women Domestic Abuse Helpline","number":181},{"id":3,"name":"Missing Child/Women (Deputy Commissioner of Police","number":1094},{"id":4,"name":"Cyber Crime Helpline","number":155620},{"id":5,"name":"Road Accident Emergency Service","number":1073},{"id":6,"name":"Railway Accident Emergency Service","number":1072},{"id":7,"name":"Anti Poison","number":1066}]';
     }
 
     List<dynamic> parsedListJson = jsonDecode(jsonResponse);
