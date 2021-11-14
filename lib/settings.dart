@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:magic_wand/friends_details.dart';
 
 class Settings extends StatefulWidget {
   const Settings({Key? key}) : super(key: key);
@@ -138,13 +139,33 @@ class _SettingsState extends State<Settings> {
                           height: 10,
                         ),
                         ElevatedButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.of(context).push(
+                              MaterialPageRoute(
+                                builder: (context) => const FriendsDetails(),
+                              ),
+                            );
+                          },
                           child: const Text("EDIT"),
                         ),
                       ],
                     ),
                   ),
                 ],
+              ),
+            ),
+            Container(
+              margin: const EdgeInsets.all(20),
+              child: ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  minimumSize: const Size(double.infinity,
+                      40), // double.infinity is the width and 30 is the height
+                ),
+                onPressed: () {},
+                child: const Text(
+                  "Save",
+                  style: TextStyle(fontSize: 18),
+                ),
               ),
             ),
           ],
