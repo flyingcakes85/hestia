@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:magic_wand/emergency.dart';
+import 'package:magic_wand/settings.dart';
 import 'home_page_card.dart';
 import 'emergency_numbers.dart';
 import 'const.dart';
@@ -35,13 +37,25 @@ class _HomeState extends State<Home> {
         centerTitle: true,
         actions: [
           IconButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.of(context).push(
+                MaterialPageRoute(
+                  builder: (context) => const Settings(),
+                ),
+              );
+            },
             icon: const Icon(Icons.settings),
           ),
         ],
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: () {},
+        onPressed: () {
+          Navigator.of(context).push(
+            MaterialPageRoute(
+              builder: (context) => const Emergency(),
+            ),
+          );
+        },
         child: const Icon(Icons.warning),
       ),
       body: Column(
