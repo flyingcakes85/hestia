@@ -9,6 +9,7 @@ class Emergency extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text("Emergency"),
+        centerTitle: true,
       ),
       body: SafeArea(
         child: SingleChildScrollView(

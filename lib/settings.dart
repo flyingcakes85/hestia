@@ -16,6 +16,7 @@ class _SettingsState extends State<Settings> {
     return Scaffold(
       appBar: AppBar(
         title: const Text("Settings"),
+        centerTitle: true,
       ),
       body: Form(
         key: _formKey,

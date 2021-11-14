@@ -16,6 +16,7 @@ class _FriendsDetailsState extends State<FriendsDetails> {
     return Scaffold(
       appBar: AppBar(
         title: const Text("Friends Details"),
+        centerTitle: true,
       ),
       body: SafeArea(
         child: SingleChildScrollView(

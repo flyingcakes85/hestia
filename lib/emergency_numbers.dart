@@ -14,6 +14,7 @@ class _EmergencyNumbersState extends State<EmergencyNumbers> {
     return Scaffold(
       appBar: AppBar(
         title: const Text("Emergency Numbers"),
+        centerTitle: true,
       ),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
