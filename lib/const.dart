@@ -11,3 +11,15 @@ var appTheme = ThemeData(
   primarySwatch: Colors.pink,
   scaffoldBackgroundColor: Colors.black,
 );
+
+var cardTitleStyle = const TextStyle(
+  color: Colors.white,
+  fontSize: 22,
+  fontWeight: FontWeight.w400,
+);
+
+var cardSubTitleStyle = const TextStyle(
+  color: Colors.white,
+  fontSize: 16,
+  fontWeight: FontWeight.w200,
+);

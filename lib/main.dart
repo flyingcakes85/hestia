@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'home_page_card.dart';
+import 'emergency_numbers.dart';
 import 'const.dart';
 
 void main() => runApp(const MyApp());
@@ -72,41 +73,47 @@ class _HomeState extends State<Home> {
           ),
           Expanded(
             child: ListView(
-              children: const [
-                SizedBox(
+              children: [
+                const SizedBox(
                   height: 10,
                 ),
-                HomepageCard(
+                const HomepageCard(
                   title: "User Info",
                   subTitle: "All info is filled. You're good to go!",
                   icon: Icons.check_circle_outline,
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 30,
                 ),
-                HomepageCard(
-                  title: "Emergency Numbers",
-                  subTitle: "Show and call on emergency numbers.",
-                  icon: Icons.call,
+                InkWell(
+                  child: const HomepageCard(
+                    title: "Emergency Numbers",
+                    subTitle: "Show and call on emergency numbers.",
+                    icon: Icons.call,
+                  ),
+                  onTap: () {
+                    Navigator.of(context).push(MaterialPageRoute(
+                        builder: (context) => const EmergencyNumbers()));
+                  },
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 30,
                 ),
-                HomepageCard(
+                const HomepageCard(
                   title: "Share live location",
                   subTitle: "Share your location that updates in real time.",
                   icon: Icons.location_on,
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 30,
                 ),
-                HomepageCard(
+                const HomepageCard(
                   title: "Travel Mode",
                   subTitle:
                       "Your contacts will be automatically alerted if you don't return.",
                   icon: Icons.card_travel,
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 30,
                 ),
               ],

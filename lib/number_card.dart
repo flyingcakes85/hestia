@@ -1,8 +1,8 @@
 import "package:flutter/material.dart";
 import 'const.dart';
 
-class HomepageCard extends StatelessWidget {
-  const HomepageCard(
+class NumberCard extends StatelessWidget {
+  const NumberCard(
       {Key? key,
       required this.title,
       required this.subTitle,
@@ -22,14 +22,7 @@ class HomepageCard extends StatelessWidget {
       decoration: cardDecoration,
       child: Row(
         children: [
-          Padding(
-            padding: const EdgeInsets.all(20.0),
-            child: Icon(
-              icon,
-              color: iconColor,
-            ),
-          ),
-          Flexible(
+          Expanded(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               mainAxisAlignment: MainAxisAlignment.center,
@@ -44,6 +37,13 @@ class HomepageCard extends StatelessWidget {
                   style: cardSubTitleStyle,
                 ),
               ],
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(20.0),
+            child: Icon(
+              icon,
+              color: iconColor,
             ),
           ),
         ],
