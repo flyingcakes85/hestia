@@ -10,29 +10,33 @@ class Emergency extends StatelessWidget {
       appBar: AppBar(
         title: const Text("Emergency"),
       ),
-      body: Center(
-        child: Flexible(
-          child: Column(
-            children: const [
-              EmergencyCard(
-                title: "Contact Friend",
-                subTitle: "Contact your friends and send details",
+      body: SafeArea(
+        child: SingleChildScrollView(
+          child: Center(
+            child: Flexible(
+              child: Column(
+                children: const [
+                  EmergencyCard(
+                    title: "Contact Friend",
+                    subTitle: "Contact your friends and send details",
+                  ),
+                  SizedBox(
+                    height: 20,
+                  ),
+                  EmergencyCard(
+                    title: "Contact Police",
+                    subTitle: "Send details to nearest police station.",
+                  ),
+                  SizedBox(
+                    height: 20,
+                  ),
+                  EmergencyCard(
+                    title: "Create FIR",
+                    subTitle: "Create an FIR from the app.",
+                  ),
+                ],
               ),
-              SizedBox(
-                height: 20,
-              ),
-              EmergencyCard(
-                title: "Contact Police",
-                subTitle: "Send details to nearest police station.",
-              ),
-              SizedBox(
-                height: 20,
-              ),
-              EmergencyCard(
-                title: "Create FIR",
-                subTitle: "Create an FIR from the app.",
-              ),
-            ],
+            ),
           ),
         ),
       ),
